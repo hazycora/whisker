@@ -2,9 +2,9 @@ const mathsteps = require('mathsteps');
 const { embedColor } = require('../config.json');
 
 module.exports = {
-	name: 'search',
-	description: 'Search for a topic',
-	usage: 'search searchTerm',
+	name: 'math',
+	description: 'Answer simple math',
+	usage: 'math 2x-2=6',
 	guildOnly: false,
 	cooldown: 5,
 	args: true,

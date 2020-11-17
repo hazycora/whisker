@@ -1,4 +1,4 @@
-Whisker is your Discord assistant. Whisker will help you find information quickly within Discord- no need to switch to another tab/app!
+## Whisker is your Discord assistant. Whisker will help you find information quickly within Discord- no need to switch to another tab/app!
 
 ### Invite Whisker to a Server
 

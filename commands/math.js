@@ -9,7 +9,7 @@ module.exports = {
 	cooldown: 5,
 	args: true,
 	execute(message, args) {
-    question = args.join(' '); 
+    let question = args.join(' '); 
     question = question.trim();
     let question = command.slice(4).trim();
     var regExp = /[a-zA-Z]/g;

@@ -3,9 +3,9 @@ let tokenMaps = process.env.mapsToken;
 const { embedColor } = require('../config.json');
 
 module.exports = {
-	name: 'math',
-	description: 'Answer simple math',
-	usage: 'math 2x-2=6',
+	name: 'time',
+	description: 'Get time zone in any location',
+	usage: 'time California',
 	guildOnly: false,
 	cooldown: 5,
 	args: true,

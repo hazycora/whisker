@@ -1,1 +1,1 @@
-# whisker-beta
+# Whisker

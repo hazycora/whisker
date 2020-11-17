@@ -10,4 +10,5 @@ Whisker will help you find information quickly within Discord- no need to switch
 - Search - find quick info about a topic, eg: "w!search The Matrix"
 - Time - get the time in any location, eg: "w!time Tokyo"
 - Math - solve simple arithmetic and algebra, eg: "w!math 4x+2=8"
+
 #### There is more to come, but I am very lazy.

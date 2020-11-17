@@ -9,7 +9,7 @@ module.exports = {
 	cooldown: 5,
 	args: true,
 	execute(message, args) {
-    search = args.join(' '); 
+    let search = args.join(' '); 
     search = search.trim();
     let options = {
       "useragent": "Whisker",

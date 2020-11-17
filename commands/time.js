@@ -5,6 +5,7 @@ const { embedColor } = require('../config.json');
 module.exports = {
 	name: 'time',
 	description: 'Get time zone in any location',
+	aliases: ['timezone'],
 	usage: 'time California',
 	guildOnly: false,
 	cooldown: 5,

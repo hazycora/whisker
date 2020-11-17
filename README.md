@@ -9,4 +9,4 @@ Remember, all commands start with "w!"
 - Search - find quick info about a topic, eg: "w!search The Matrix"
 - Time - get the time in any location, eg: "w!time Tokyo"
 - Math - solve simple arithmetic and algebra, eg: "w!math 4x+2=8"
-- MORE TO COME, I'M JUST VERY LAZY!
+#### There is more to come, but I am very lazy.

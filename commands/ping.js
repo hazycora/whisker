@@ -1,5 +1,6 @@
 module.exports = {
 	name: 'ping',
+	aliases: ['ping!'],
 	description: 'Ping!',
 	usage: 'ping',
 	guildOnly: true,

@@ -1,5 +1,5 @@
 const ddg = require('ddg');
-const { colorEmbed } = require('../config.json');
+const { embedColor } = require('../config.json');
 
 module.exports = {
 	name: 'search',

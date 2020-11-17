@@ -11,7 +11,6 @@ module.exports = {
 	execute(message, args) {
     let question = args.join(' '); 
     question = question.trim();
-    let question = command.slice(4).trim();
     var regExp = /[a-zA-Z]/g;
 
     if(regExp.test(question)){

@@ -4,12 +4,13 @@ let tokenMaps = process.env.mapsToken;
 const { embedColor } = require('../config.json');
 
 module.exports = {
-	name: 'time',
-	description: 'Get time zone in any location',
-	usage: 'time California',
+	name: 'help',
+	aliases: ['commands'],
+	description: 'list the commands',
+	usage: 'help',
 	guildOnly: false,
 	cooldown: 5,
-	args: true,
+	args: false,
 	execute(message, args) {
     const helpEmbed =     {
           "description": "**Commands:**",

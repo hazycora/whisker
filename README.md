@@ -2,7 +2,7 @@
 
 ### Invite Whisker to a Server
 
-<button onclick="location.href='https://discord.com/api/oauth2/authorize?client_id=774013434072137748&permissions=298150976&scope=bot'" type="button">Tap Here to Invite Whisker</button>
+[Tap Here to Invite Whisker](https://discord.com/api/oauth2/authorize?client_id=774013434072137748&permissions=298150976&scope=bot)
 
 ### Commands
 Remember, all commands start with "w!"

@@ -12,14 +12,11 @@ Remember, all commands start with "w!"
 
 ### Show me it!
 
-Whisker can search for a topic,
 
 <img src="https://hazycora.com/whisker/assets/demo-search.png" alt="Demonstration of Command 'search'" width="500"/>
 
-tell you the time in any location,
 
 <img src="https://hazycora.com/whisker/assets/demo-time.png" alt="Demonstration of Command 'time'" width="500"/>
 
-and because why not, solve arithmetic and algebra.
 
 <img src="https://hazycora.com/whisker/assets/demo-math-2.png" alt="Demonstration of Command 'math'" width="250"/>

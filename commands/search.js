@@ -9,7 +9,7 @@ module.exports = {
 	args: true,
 	execute(message, args) {
     search = args.join(' '); 
-    search = term.trim();
+    search = search.trim();
     let options = {
       "useragent": "Whisker",
       "no_redirects": "1",

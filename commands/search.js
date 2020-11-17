@@ -57,16 +57,16 @@ module.exports = {
         thumbnail: {
           url: thumbnail,
         },
-        fields: [
-          {
-            name: 'Websites',
-            value: 'Websites that may be relevent to your search:',
-          },
-          {
-            name: 'No websites',
-            value: 'There are no websites for this search.',
-          },
-        ],
+//         fields: [
+//           {
+//             name: 'Websites',
+//             value: 'Websites that may be relevent to your search:',
+//           },
+//           {
+//             name: 'No websites',
+//             value: 'There are no websites for this search.',
+//           },
+//         ],
         footer: {
           text: bottom,
         },

@@ -3,6 +3,7 @@ const { embedColor } = require('../config.json');
 
 module.exports = {
 	name: 'search',
+	aliases: ['what\'s'],
 	description: 'Search for a topic',
 	usage: 'search searchTerm',
 	guildOnly: false,

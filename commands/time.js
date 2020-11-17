@@ -11,7 +11,7 @@ module.exports = {
 	args: true,
 	execute(message, args) {
     let location = args.join(' '); 
-    location = question.trim();
+    location = location.trim();
     let query = location.replace(/ /g, "plusSIGN");
     query = encodeURIComponent(query);
     query = query.replace(/plusSIGN/g, "+");

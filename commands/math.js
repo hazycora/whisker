@@ -3,6 +3,7 @@ const { embedColor } = require('../config.json');
 
 module.exports = {
 	name: 'math',
+	aliases: ['solve'],
 	description: 'Answer simple math',
 	usage: 'math 2x-2=6',
 	guildOnly: false,

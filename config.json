@@ -1,5 +1,6 @@
 {
 	"prefix": "w!",
 	"embedColor": 9338051,
-	"supportChannelID": "778902833444945920"
+	"errorChannelID": "778902833444945920",
+	"logChannelID": "778905338337296384"
 }

@@ -21,6 +21,22 @@ module.exports = {
 		fetch('http://www.omdbapi.com/?t='+query+'&apikey='+omdbToken)
 			.then(res => res.json())
 			.then((out) => {
+			if (out.Response==False) {
+				let errorEmbed = {
+				      "title": "No media found.",
+				      "description": "Most likely this media is not on IMDb. Just in case this was a bot error, a message will be sent to Whisker's developer/s.",
+				      "color": embedColor,
+				      "author": {
+					"name": "Searching for \"Caillou\"",
+					"icon_url": "https://cdn.onlinewebfonts.com/svg/img_129504.png"
+				      },
+				      "thumbnail": {
+					"url": "https://m.media-amazon.com/images/M/MV5BYWU2YzhmZWEtYTczYi00OWJkLThkNjEtMzkxYjM5ZGM4OWNiXkEyXkFqcGdeQXVyMjM5NDQzNTk@._V1_SX300.jpg"
+				      }
+				    }
+				message.channel.send({ embed: errorEmbed });
+				return;
+			}
 			let { Title, Plot, Actors, Director, Writer, Genre, Runtime, Ratings, Type, Production, Poster } = out;
 			let Time = "N/A";
 			if (Type=="series") {
@@ -41,7 +57,7 @@ module.exports = {
 			}
 			embedRatings = embedRatings.replace("\n", ""); //remove first line break
 
-			const timeEmbed = {
+			const mediaEmbed = {
 				"color": embedColor,
 				"fields": [
 				  {
@@ -75,7 +91,7 @@ module.exports = {
 			};
 			//end of that whole object thing
 
-			message.channel.send({ embed: timeEmbed });
+			message.channel.send({ embed: mediaEmbed });
 		}).catch(err => console.error(err));
 
 	},

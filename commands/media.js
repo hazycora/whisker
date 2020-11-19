@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 let omdbToken = process.env.omdbToken;
-const { embedColor } = require('../config.json');
+const { embedColor, supportChannelID } = require('../config.json');
 
 module.exports = {
 	name: 'media',

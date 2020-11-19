@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix } = require('./config.json');
+const { prefix, errorChannelID, logChannelID } = require('./config.json');
 
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
@@ -30,6 +30,7 @@ client.on('message', message => {
 	const commandName = args.shift().toLowerCase();
 	
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
+	client.channels.cache.get(logChannelID).send('A user used command "'+message.content+'"');
 	
 	if (!command) return;
 
@@ -38,6 +39,7 @@ client.on('message', message => {
 	} catch (error) {
 		console.error(error);
 		message.reply('There was an error trying to execute that command.');
+		client.channels.cache.get(errorChannelID).send('Error. User used command "'+message.content+'"');
 	}
 
 

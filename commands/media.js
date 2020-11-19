@@ -12,7 +12,7 @@ module.exports = {
 	args: true,
 	execute(message, args) {
     let film = args.join(' '); 
-    film = location.trim();
+    film = film.trim();
     //this is not actually needed, but I am adding it anyways in case OMDb ever forces people to use plus signs for requests.
     let query = film.replace(/ /g, "plusSIGN");
     query = encodeURIComponent(query);

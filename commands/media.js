@@ -27,7 +27,7 @@ function mediaCommand(message, film, realFilm) {
 		.then(res => res.json())
 		.then((out) => {
 		if (out.Response=="False") {
-			if (film.toLowerCase.contains("and")) {
+			if (film.toLowerCase().contains("and")) {
 				let filmAmpersand = film.replace(/and/g, "&");
 				mediaCommand(message, filmAmpersand, film);
 				return;

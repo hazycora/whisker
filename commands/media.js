@@ -33,7 +33,7 @@ function mediaCommand(message, film, realFilm, client) {
 				mediaCommand(message, filmAmpersand, film);
 				return;
 			}
-			let fullJson = JSON.stringify(out);
+			let fullJson = JSON.stringify(out, null, 2);
 			if (fullJson.length > 1700) { // character limit, could be higher but I don't care
 				fullJson = fullJson.substring(0,8)+"...";
 			}
@@ -106,7 +106,7 @@ function mediaCommand(message, film, realFilm, client) {
 		};
 		//end of that whole object thing
 		
-		let fullJson = JSON.stringify(out);
+		let fullJson = JSON.stringify(out, null, 2);
 		if (fullJson.length > 1700) { // character limit, could be higher but I don't care
 			fullJson = fullJson.substring(0,1700)+"...";
 		}

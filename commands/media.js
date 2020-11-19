@@ -58,7 +58,7 @@ module.exports = {
 				  },
 				  {
 				    "name": "Ratings",
-				    "value": "Ratings currently unavailable."
+				    "value": embedRatings
 				  },
 				  {
 				    "name": "Extra Info",

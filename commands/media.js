@@ -40,9 +40,6 @@ function mediaCommand(message, film, realFilm, client) {
 			      "author": {
 				"name": "Searching for \""+realFilm+"\"",
 				"icon_url": "https://hazycora.com/whisker/assets/iconMedia.png"
-			      },
-			      "thumbnail": {
-				"url": "https://m.media-amazon.com/images/M/MV5BYWU2YzhmZWEtYTczYi00OWJkLThkNjEtMzkxYjM5ZGM4OWNiXkEyXkFqcGdeQXVyMjM5NDQzNTk@._V1_SX300.jpg"
 			      }
 			    }
 			message.channel.send({ embed: errorEmbed });

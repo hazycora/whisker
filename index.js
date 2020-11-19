@@ -23,6 +23,7 @@ const cooldowns = new Discord.Collection();
 client.once('ready', () => {
 	client.user.setActivity('w!help, made by hazycora', { type: 'LISTENING' });
 	console.log('Ready!');
+	client.channels.cache.get(logChannelID).send('Bot finished restarting.');
 });
 
 client.on('message', message => {
@@ -40,7 +41,7 @@ client.on('message', message => {
 	
 	if (command.args && !args.length) {
 		return message.channel.send(`You didn't provide any arguments, ${message.author}!`);
-		let reply = `You didn't provide any arguments, ${message.author}!\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+		let reply = `TESTYou didn't provide any arguments, ${message.author}!\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
 
 		return message.channel.send(reply);
 	}

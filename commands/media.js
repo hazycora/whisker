@@ -26,7 +26,7 @@ module.exports = {
 			if (Type=="series") {
 				Time = "Years: "+out.Years;
 			}else {
-				Time = "Years: "+out.Released;
+				Time = "Release Date: "+out.Released;
 			}
 			let embedExtra;
 			if (Production==undefined) {

@@ -34,6 +34,8 @@ client.on('message', message => {
 	
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 	
+	if (!command) return;
+	
 	if (command.guildOnly && message.channel.type === 'dm') {
 		let errorEmbed = {
 		      "description": 'I can\'t execute that command inside DMs!',
@@ -70,7 +72,6 @@ client.on('message', message => {
 		}
 	}
 	
-	if (!command) return;
 	
 	
 

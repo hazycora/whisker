@@ -8,7 +8,7 @@ module.exports = {
 	aliases: ['media', 'tv', 'films', 'film', 'movies', 'movie'],
 	usage: 'media Thomas the Tank Engine',
 	guildOnly: false,
-	cooldown: 5,
+	cooldown: 30,
 	args: true,
 	execute(message, args, client) {
 		let film = args.join(' '); 

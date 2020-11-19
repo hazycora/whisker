@@ -18,7 +18,7 @@ module.exports = {
     query = encodeURIComponent(query);
     query = query.replace(/plusSIGN/g, "+");
 
-    fetch('www.omdbapi.com/?t='+query+'&apikey='+omdbToken)
+    fetch('http://www.omdbapi.com/?t='+query+'&apikey='+omdbToken)
       .then(res => res.json())
       .then((out) => {
       let { Title, Plot, Actors, Director, Writer, Genre, Runtime, Ratings, Type, Production, Poster } = out;

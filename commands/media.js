@@ -32,7 +32,8 @@ function mediaCommand(message, film, realFilm, client) {
 				mediaCommand(message, filmAmpersand, film);
 				return;
 			}
-			client.channels.cache.get(errorChannelID).send('Small error. User used command "'+message.content+'"');
+			let fullJson = JSON.stringify(out);
+			client.channels.cache.get(errorChannelID).send('Small error. User used command "'+message.content+'" and output was this:\n```'+fullJson+'```');
 			let errorEmbed = {
 			      "title": "No media found.",
 			      "description": "Most likely this media is not on IMDb. Just in case this was a bot error, a message will be sent to Whisker's developer/s.",

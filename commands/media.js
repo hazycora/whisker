@@ -27,7 +27,7 @@ module.exports = {
 				      "description": "Most likely this media is not on IMDb. Just in case this was a bot error, a message will be sent to Whisker's developer/s.",
 				      "color": embedColor,
 				      "author": {
-					"name": "Searching for \""+Title+"\"",
+					"name": "Searching for \""+film+"\"",
 					"icon_url": "https://hazycora.com/whisker/assets/iconMedia.png"
 				      },
 				      "thumbnail": {

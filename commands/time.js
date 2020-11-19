@@ -8,7 +8,7 @@ module.exports = {
 	aliases: ['timezone'],
 	usage: 'time California',
 	guildOnly: false,
-	cooldown: 5,
+	cooldown: 10,
 	args: true,
 	execute(message, args) {
     let location = args.join(' '); 

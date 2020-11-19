@@ -21,6 +21,6 @@ module.exports = {
 		      }
 		    }
 		
-		message.channel.send();
+		message.channel.send({ embed: timeEmbed });
 	},
 };

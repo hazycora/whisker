@@ -46,7 +46,7 @@ function mediaCommand(message, film, realFilm, client) {
 			      "color": embedColor,
 			      "author": {
 				"name": "Searching for \""+realFilm+"\"",
-				"icon_url": "https://hazycora.com/whisker/assets/iconMedia.png"
+				"icon_url": "https://hazycora.com/whisker/assets/iconError.png"
 			      }
 			    }
 			message.channel.send({ embed: errorEmbed });

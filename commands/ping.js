@@ -5,8 +5,8 @@ module.exports = {
 	aliases: ['latency'],
 	description: 'Send info about latency',
 	usage: 'ping',
-	guildOnly: true,
-	cooldown: 5,
+	guildOnly: false,
+	cooldown: 1,
 	args: false,
 	execute(message, args) {
 		let pingEmbed = {

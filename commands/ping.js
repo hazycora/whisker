@@ -8,13 +8,10 @@ module.exports = {
 	guildOnly: false,
 	cooldown: 1,
 	args: false,
-	execute(message, args) {
+	execute(message, args, client) {
 		let pingEmbed = {
-		      "description": "Latency is "+(Date.now() - message.createdTimestamp)+" ms.",
+		      "description": "Latency is "+(Date.now() - message.createdTimestamp)+" ms, Discord's API Latency is "+Math.round(client.ws.ping)+"ms.",
 		      "color": embedColor,
-		      "footer": {
-			"text": "This is the latency of the bot plus the latency of Discord itself."
-		      },
 		      "author": {
 			"name": "Ping",
 			"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"

@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 let omdbToken = process.env.omdbToken;
-const { embedColor, errorChannelID } = require('../config.json');
+const { embedColor, errorChannelID, logChannelID } = require('../config.json');
 
 module.exports = {
 	name: 'media',
@@ -33,6 +33,10 @@ function mediaCommand(message, film, realFilm, client) {
 				return;
 			}
 			let fullJson = JSON.stringify(out);
+			if (fullJson.length > 8) { // 8 for testing
+				fullJson = fullJson.substring(0,8)+"...";
+			}
+			
 			client.channels.cache.get(errorChannelID).send('Small error. User used command "'+message.content+'" and output was this:\n```'+fullJson+'```');
 			let errorEmbed = {
 			      "title": "No media found.",

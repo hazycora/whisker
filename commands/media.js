@@ -13,11 +13,11 @@ module.exports = {
 	execute(message, args, client) {
 		let film = args.join(' '); 
 		film = film.trim();
-		mediaCommand(message, film, film);
+		mediaCommand(message, film, film, client);
 	},
 };
 
-function mediaCommand(message, film, realFilm) {
+function mediaCommand(message, film, realFilm, client) {
 	//this is not actually needed, but I am adding it anyways in case OMDb ever forces people to use plus signs for requests.
 	let query = film.replace(/ /g, "plusSIGN");
 	query = encodeURIComponent(query);

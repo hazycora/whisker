@@ -21,6 +21,6 @@ module.exports = {
 		      }
 		    }
 		
-		message.channel.send({ embed: timeEmbed });
+		message.channel.send({ embed: pingEmbed });
 	},
 };

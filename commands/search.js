@@ -18,7 +18,7 @@ module.exports = {
       "no_html": "0",
     }
     let description = "There is no description for this search term.";
-    let heading = 'DuckDuckGo search for "'+search+'":';
+    let heading = 'Search for "'+search+'":';
     let footer = "There has been an error.";
     let source = "";
     let sourceURL = "";
@@ -52,7 +52,7 @@ module.exports = {
         color: embedColor,
         author: {
           name: 'Searching for "'+search+'"',
-          icon_url: 'https://external-content.duckduckgo.com/ip3/duckduckgo.com.ico',
+          icon_url: 'https://hazycora.com/whisker/assets/iconMath.png',
         },
         description: description,
         thumbnail: {

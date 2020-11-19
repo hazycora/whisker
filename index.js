@@ -33,7 +33,6 @@ client.on('message', message => {
 	const commandName = args.shift().toLowerCase();
 	
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-	client.channels.cache.get(logChannelID).send('A user used command "'+message.content+'"');
 	
 	if (command.guildOnly && message.channel.type === 'dm') {
 		return message.reply('I can\'t execute that command inside DMs!');
@@ -48,9 +47,16 @@ client.on('message', message => {
 		
 		return message.channel.send(reply);
 	}
-
+	
+	if (command.log) {
+		if (command.log==false) {
+			client.channels.cache.get(logChannelID).send('A user used command "'+message.content+'"');
+		}
+	}
 	
 	if (!command) return;
+	
+	
 
 	if (!cooldowns.has(command.name)) {
 		cooldowns.set(command.name, new Discord.Collection());

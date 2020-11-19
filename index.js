@@ -40,7 +40,7 @@ client.on('message', message => {
 		      "color": embedColor,
 		      "author": {
 			"name": "Error",
-			"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"
+			"icon_url": "https://hazycora.com/whisker/assets/iconError.png"
 		      }
 		    }
 		return message.reply({ embed: errorEmbed });
@@ -58,7 +58,7 @@ client.on('message', message => {
 		      "color": embedColor,
 		      "author": {
 			"name": "Error",
-			"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"
+			"icon_url": "https://hazycora.com/whisker/assets/iconError.png"
 		      }
 		    }
 		return message.reply({ embed: errorEmbed });

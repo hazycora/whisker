@@ -5,9 +5,9 @@ module.exports = {
 	name: 'search',
 	aliases: ['what\'s'],
 	description: 'Search for a topic',
-	usage: 'search searchTerm',
+	usage: 'search NASA',
 	guildOnly: false,
-	cooldown: 5,
+	cooldown: 10,
 	args: true,
 	execute(message, args) {
     let search = args.join(' '); 

@@ -40,7 +40,7 @@ module.exports = {
           color: embedColor,
           author: {
             name: 'Time in "'+location+'"',
-            icon_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/OOjs_UI_icon_clock-invert.svg/200px-OOjs_UI_icon_clock-invert.svg.png',
+            icon_url: 'https://hazycora.com/whisker/assets/iconTime.png',
           },
           description: timeAsString,
           footer: {

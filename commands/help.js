@@ -9,7 +9,7 @@ module.exports = {
 	description: 'list the commands',
 	usage: 'help',
 	guildOnly: false,
-	cooldown: 5,
+	cooldown: 1,
 	args: false,
 	execute(message, args) {
     const helpEmbed =     {

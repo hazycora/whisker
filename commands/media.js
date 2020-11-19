@@ -34,7 +34,7 @@ function mediaCommand(message, film, realFilm, client) {
 				return;
 			}
 			let fullJson = JSON.stringify(out);
-			if (fullJson.length > 8) { // 8 for testing
+			if (fullJson.length > 1700) { // character limit, could be higher but I don't care
 				fullJson = fullJson.substring(0,8)+"...";
 			}
 			

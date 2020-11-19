@@ -10,7 +10,7 @@ module.exports = {
 	guildOnly: false,
 	cooldown: 5,
 	args: true,
-	execute(message, args) {
+	execute(message, args, client) {
 		let film = args.join(' '); 
 		film = film.trim();
 		mediaCommand(message, film, film);
@@ -32,6 +32,7 @@ function mediaCommand(message, film, realFilm) {
 				mediaCommand(message, filmAmpersand, film);
 				return;
 			}
+			client.channels.cache.get(supportChannelID).send('Small error. User used command "'+message.content+'"');
 			let errorEmbed = {
 			      "title": "No media found.",
 			      "description": "Most likely this media is not on IMDb. Just in case this was a bot error, a message will be sent to Whisker's developer/s.",

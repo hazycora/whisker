@@ -40,7 +40,7 @@ module.exports = {
 			let { Title, Plot, Actors, Director, Writer, Genre, Runtime, Ratings, Type, Production, Poster } = out;
 			let Time = "N/A";
 			if (Type=="series") {
-				Time = "Years: "+out.Years;
+				Time = "Years: "+out.Year;
 			}else {
 				Time = "Release Date: "+out.Released;
 			}

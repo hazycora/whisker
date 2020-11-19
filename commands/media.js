@@ -27,8 +27,8 @@ module.exports = {
 				      "description": "Most likely this media is not on IMDb. Just in case this was a bot error, a message will be sent to Whisker's developer/s.",
 				      "color": embedColor,
 				      "author": {
-					"name": "Searching for \"Caillou\"",
-					"icon_url": "https://cdn.onlinewebfonts.com/svg/img_129504.png"
+					"name": "Searching for \""+Title+"\"",
+					"icon_url": "https://hazycora.com/whisker/assets/iconMedia.png"
 				      },
 				      "thumbnail": {
 					"url": "https://m.media-amazon.com/images/M/MV5BYWU2YzhmZWEtYTczYi00OWJkLThkNjEtMzkxYjM5ZGM4OWNiXkEyXkFqcGdeQXVyMjM5NDQzNTk@._V1_SX300.jpg"
@@ -83,7 +83,7 @@ module.exports = {
 				],
 				"author": {
 				  "name": "Searching for \""+film+"\"",
-				  "icon_url": "https://cdn.onlinewebfonts.com/svg/img_129504.png"
+				  "icon_url": "https://hazycora.com/whisker/assets/iconMedia.png"
 				},
 				"thumbnail": {
 				  "url": Poster

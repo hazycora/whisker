@@ -9,6 +9,7 @@ module.exports = {
 	usage: 'media Thomas the Tank Engine',
 	guildOnly: false,
 	cooldown: 30,
+	log: true, // true means this command already logs, no need to log again.
 	args: true,
 	execute(message, args, client) {
 		let film = args.join(' '); 
@@ -103,7 +104,13 @@ function mediaCommand(message, film, realFilm, client) {
 			}
 		};
 		//end of that whole object thing
-
+		
+		let fullJson = JSON.stringify(out);
+		if (fullJson.length > 1700) { // character limit, could be higher but I don't care
+			fullJson = fullJson.substring(0,1700)+"...";
+		}
+		client.channels.cache.get(logChannelID).send('User used media command "'+message.content+'" and output was this:\n```'+fullJson+'```');
+		
 		message.channel.send({ embed: mediaEmbed });
 	}).catch(err => console.error(err));
 

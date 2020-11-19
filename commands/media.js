@@ -21,7 +21,7 @@ module.exports = {
 		fetch('http://www.omdbapi.com/?t='+query+'&apikey='+omdbToken)
 			.then(res => res.json())
 			.then((out) => {
-			if (out.Response==False) {
+			if (out.Response=="False") {
 				let errorEmbed = {
 				      "title": "No media found.",
 				      "description": "Most likely this media is not on IMDb. Just in case this was a bot error, a message will be sent to Whisker's developer/s.",

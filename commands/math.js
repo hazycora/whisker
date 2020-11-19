@@ -31,7 +31,7 @@ module.exports = {
         color: embedColor,
         author: {
           name: 'Solve math "'+question+'"',
-          icon_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/GNOME_Calculator_icon_2018.svg/128px-GNOME_Calculator_icon_2018.svg.png',
+          icon_url: 'https://hazycora.com/whisker/assets/iconMath.png',
         },
         description: answer,
         footer: {
@@ -47,7 +47,7 @@ module.exports = {
         color: embedColor,
         author: {
           name: 'Solve math "'+question+'"',
-          icon_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/GNOME_Calculator_icon_2018.svg/128px-GNOME_Calculator_icon_2018.svg.png',
+          icon_url: 'https://hazycora.com/whisker/assets/iconMath.png',
         },
         description: answer,
         footer: {

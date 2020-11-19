@@ -52,7 +52,7 @@ module.exports = {
         color: embedColor,
         author: {
           name: 'Searching for "'+search+'"',
-          icon_url: 'https://hazycora.com/whisker/assets/iconMath.png',
+          icon_url: 'https://hazycora.com/whisker/assets/iconSearch.png',
         },
         description: description,
         thumbnail: {

@@ -35,17 +35,33 @@ client.on('message', message => {
 	const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
 	
 	if (command.guildOnly && message.channel.type === 'dm') {
-		return message.reply('I can\'t execute that command inside DMs!');
+		let errorEmbed = {
+		      "description": 'I can\'t execute that command inside DMs!',
+		      "color": embedColor,
+		      "author": {
+			"name": "Error",
+			"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"
+		      }
+		    }
+		return message.reply({ embed: errorEmbed });
 	}
 	
 	if (command.args && !args.length) {
-		let reply = `You didn't provide any arguments, ${message.author}!`;
+		let reply = `You didn't provide any arguments!`;
 
 		if (command.usage) {
 			reply += `\nThe proper usage would be: \`${prefix} ${command.usage}\``;
 		}
 		
-		return message.channel.send(reply);
+		let errorEmbed = {
+		      "description": reply,
+		      "color": embedColor,
+		      "author": {
+			"name": "Error",
+			"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"
+		      }
+		    }
+		return message.reply({ embed: errorEmbed });
 	}
 	
 	if (command.log) {
@@ -71,7 +87,15 @@ client.on('message', message => {
 
 		if (now < expirationTime) {
 			const timeLeft = (expirationTime - now) / 1000;
-			return message.reply(`please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`);
+			let errorEmbed = {
+			      "description": "please wait "+timeLeft.toFixed(1)+" more second(s) before reusing the `"+command.name+"` command.",
+			      "color": embedColor,
+			      "author": {
+				"name": "Cooldown",
+				"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"
+			      }
+			    }
+			return message.reply({ embed: errorEmbed });
 		}
 	}
 	timestamps.set(message.author.id, now);
@@ -81,9 +105,18 @@ client.on('message', message => {
 	try {
 		command.execute(message, args, client);
 	} catch (error) {
+		let errorEmbed = {
+		      "description": "There was an error trying to execute that command.",
+		      "color": embedColor,
+		      "author": {
+			"name": "Error",
+			"icon_url": "https://hazycora.com/whisker/assets/iconPing.png"
+		      }
+		    }
+		
 		console.error(error);
-		message.reply('There was an error trying to execute that command.');
-		client.channels.cache.get(errorChannelID).send('Error. User used command "'+message.content+'"');
+		message.channel.send({ embed: errorEmbed });
+		client.channels.cache.get(errorChannelID).send('Error. User used command "'+message.content+'", got error: \n```'+error+'```');
 	}
 
 

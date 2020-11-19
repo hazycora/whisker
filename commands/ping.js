@@ -10,7 +10,7 @@ module.exports = {
 	args: false,
 	execute(message, args) {
 		let pingEmbed = {
-		      "description": "Latency is "+(Date.now() - message.createdTimestamp)+" ms. API Latency is "+Math.round(client.ws.ping)+" ms",
+		      "description": "Latency is "+(Date.now() - message.createdTimestamp)+" ms. API Latency is "+Math.round(Client.ws.ping)+" ms",
 		      "color": embedColor,
 		      "author": {
 			"name": "Ping",

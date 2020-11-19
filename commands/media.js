@@ -30,9 +30,9 @@ module.exports = {
 			}
 			let embedExtra;
 			if (Production==undefined) {
-				embedExtra = "Genre: "+Genre+"\nRuntime: "+Runtime+"\nYears: "+Time;
+				embedExtra = "Genre: "+Genre+"\nRuntime: "+Runtime+"\n"+Time;
 			}else{
-				embedExtra = "Genre: "+Genre+"\nRuntime: "+Runtime+"\nYears: "+Time+"\nProduction: "+Production;
+				embedExtra = "Genre: "+Genre+"\nRuntime: "+Runtime+"\n"+Time+"\nProduction: "+Production;
 			}
 			
 			let embedRatings = "";

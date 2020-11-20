@@ -127,7 +127,8 @@ client.on('message', message => {
 });
 
 telegram.on("text", (message) => {
-  telegram.sendMessage(message.chat.id, "Hello world");
+	console.log("message recieved from telegram");
+	telegram.sendMessage(message.chat.id, "Hello world");
 });
 
 let tokenDiscord = process.env.discordToken;

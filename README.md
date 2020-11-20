@@ -1,4 +1,4 @@
-## Get information quickly through Discord on Whisker.
+## Get information quickly on Discord through Whisker.
 Whisker will help you find information quickly within Discord- no need to switch to another tab/app!
 
 ### Invite Whisker to a Server

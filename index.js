@@ -6,7 +6,7 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
 var TelegramBot = require('node-telegram-bot-api'),
-    telegram = new TelegramBot(process.env.telegramToken, { polling: true });
+let telegram = new TelegramBot(process.env.telegramToken, { polling: true });
 
 const fetch = require('node-fetch');
 const ddg = require('ddg');
@@ -126,9 +126,11 @@ client.on('message', message => {
 
 });
 
-telegram.on("text", (message) => {
-	console.log("message recieved from telegram");
-	telegram.sendMessage(message.chat.id, "Hello world");
+telegram.on('message', (msg) => {
+  const chatId = msg.chat.id;
+ 
+  // send a message to the chat acknowledging receipt of their message
+  telegram.sendMessage(chatId, 'Received your message');
 });
 
 let tokenDiscord = process.env.discordToken;

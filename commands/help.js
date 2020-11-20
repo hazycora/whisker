@@ -12,7 +12,7 @@ module.exports = {
 	cooldown: 1,
 	args: false,
 	execute(message, args) {
-    const helpEmbed =     {
+    const helpEmbed =     { //Media - find information about a movie or show, eg: "w!media Coraline"
           "description": "**Commands:**",
           "color": 9338051,
           "fields": [
@@ -27,7 +27,11 @@ module.exports = {
       {
         "name": "time",
         "value": "``w!time`` - get the current time in a specific place, eg: ``w!time New York City``"
-      }
+      },
+      {
+        "name": "media",
+        "value": "``w!media`` - find information about a movie or show, eg: ``w!media Coraline``"
+      },
           ],
           "author": {
       "name": "Help!"

@@ -7,7 +7,7 @@ Whisker will help you find information quickly within Discord- no need to switch
 
 ### Commands
 ##### Remember, all commands start with "w!"
-- Search - find quick info about a topic, eg: "w!search The Matrix"
+- Search - find quick info about a topic, eg: "w!search NASA"
 - Time - get the time in any location, eg: "w!time Tokyo"
 - Math - solve simple arithmetic and algebra, eg: "w!math 4x+2=8"
 - Media - find information about a movie or show, eg: "w!media Coraline"

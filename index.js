@@ -5,9 +5,6 @@ const { prefix, errorChannelID, logChannelID } = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
-var TelegramBot = require('node-telegram-bot-api'),
-let telegram = new TelegramBot(process.env.telegramToken, { polling: true });
-
 const fetch = require('node-fetch');
 const ddg = require('ddg');
 const mathsteps = require('mathsteps');
@@ -124,13 +121,6 @@ client.on('message', message => {
 	}
 
 
-});
-
-telegram.on('message', (msg) => {
-  const chatId = msg.chat.id;
- 
-  // send a message to the chat acknowledging receipt of their message
-  telegram.sendMessage(chatId, 'Received your message');
 });
 
 let tokenDiscord = process.env.discordToken;

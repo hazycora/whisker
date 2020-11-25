@@ -1,0 +1,3 @@
+Terms of Service
+
+This service does not save user data. This service only sends information you request. If you use a command, you're accepting that the command will be executed.

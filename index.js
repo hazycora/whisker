@@ -104,7 +104,7 @@ client.on('message', message => {
 
 	
 	try {
-		command.execute(message, args, client);
+		command.execute(message, args, client, twitterClient);
 	} catch (error) {
 		let errorEmbed = {
 		      "description": "There was an error trying to execute that command.",
